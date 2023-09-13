@@ -76,17 +76,17 @@ password.send_keys("12345678")
 time.sleep(5)
 day_dropdown = Select(driver.find_element(By.XPATH, "//*[@id='days']"))
 time.sleep(5)
-day_dropdown.select_by_value("17")  # Replace "2" with the day you want to select
+day_dropdown.select_by_value("17")
 time.sleep(5)
 
 month_dropdown = Select(driver.find_element(By.XPATH, "//*[@id='months']"))
 time.sleep(5)
-month_dropdown.select_by_visible_text("March")  # Replace with the month you want to select
+month_dropdown.select_by_visible_text("March")  
 time.sleep(5)
 
 year_dropdown = Select(driver.find_element(By.XPATH, "//*[@id='years']"))
 time.sleep(5)
-year_dropdown.select_by_index(1)  # Replace with the index of the year option you want to select
+year_dropdown.select_by_index(1)
 time.sleep(5)
 driver.find_element(By.XPATH, "//*[@id='newsletter']").click()
 time.sleep(5)
@@ -163,11 +163,11 @@ except Exception as e:
 time.sleep(5)
 driver.get("https://automationexercise.com/")
 try:
-    # Replace the XPATH with the actual XPath or locator for the anchor element
+
     anchor_element = driver.find_element(By.XPATH, "//b[contains(text(),'farzana lubna890')]")
     time.sleep(5)
-    # Verify if the anchor element contains the expected text
-    expected_text = " Logged in as farzana lubna890 "  # Replace with the expected text
+
+    expected_text = " Logged in as farzana lubna890 "
     if expected_text in anchor_element.text:
         print(f"Text '{expected_text}' found at the top. Verification successful!")
     else:
@@ -213,16 +213,16 @@ except Exception as e:
 
 #verify review order
 
-# Step 3: Find the element displaying the total amount
+
 try:
-    # Replace the XPATH with the actual XPath or locator for the total amount element
+
     total_amount_element = driver.find_element(By.XPATH, "//*[@id='cart_info']/table/tbody/tr[2]/td[4]/p")
 
     # Get the total amount value
     total_amount = total_amount_element.text
 
     # Verify the total amount
-    expected_total = "Rs. 500"  # Replace with the expected total amount
+    expected_total = "Rs. 500"
     if expected_total == total_amount:
         print(f"Total amount is correct: {total_amount}")
     else:
@@ -282,11 +282,11 @@ time.sleep(5)
 #verify success payment
 
 try:
-    # Replace the XPATH with the actual XPath or locator for the success message element
+
     success_message_element = driver.find_element(By.XPATH, "//*[@id='form']/div/div/div/p")
 
     # Verify the success message
-    expected_message = 'Congratulations! Your order has been confirmed!'  # Replace with the expected message
+    expected_message = 'Congratulations! Your order has been confirmed!'
     actual_message = success_message_element.text
 
     if expected_message == actual_message:
